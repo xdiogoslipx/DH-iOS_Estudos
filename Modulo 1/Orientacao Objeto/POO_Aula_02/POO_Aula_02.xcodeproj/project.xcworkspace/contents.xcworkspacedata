@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OrientacaoObjeto.xcodeproj">
+      location = "self:POO_Aula_02.xcodeproj">
    </FileRef>
 </Workspace>
