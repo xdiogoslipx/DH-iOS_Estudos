@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CalculadoraVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculadoraVC" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mec-HU-9WJ" customClass="CalculadoraView" customModule="CalculadoraIMC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIO-Ea-lHV" customClass="CalculadoraView" customModule="CalculadoraIMC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="250"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="qgT-pe-i4i">
+                                                <rect key="frame" x="20" y="80" width="374" height="90"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Altura" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-Uf-9gN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="alturaTextField:" destination="efy-Qt-4H7" eventType="editingDidEnd" id="emG-uO-xxm"/>
+                                                            <action selector="pesoTextField:" destination="efy-Qt-4H7" eventType="editingDidEnd" id="GHM-wA-fsv"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Peso" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9u-Sd-seq">
+                                                        <rect key="frame" x="0.0" y="56" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="pesoTextField:" destination="efy-Qt-4H7" eventType="editingDidEnd" id="Kx7-hI-eTu"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qgT-pe-i4i" firstAttribute="leading" secondItem="oIO-Ea-lHV" secondAttribute="leading" constant="20" id="2D6-yK-yXC"/>
+                                            <constraint firstAttribute="height" constant="250" id="Mu0-lO-1UN"/>
+                                            <constraint firstAttribute="trailing" secondItem="qgT-pe-i4i" secondAttribute="trailing" constant="20" id="cAa-aC-D42"/>
+                                            <constraint firstItem="qgT-pe-i4i" firstAttribute="centerY" secondItem="oIO-Ea-lHV" secondAttribute="centerY" id="rP9-fT-peC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="alturaTextField" destination="hEm-Uf-9gN" id="gcJ-pM-0Cd"/>
+                                            <outlet property="pesoTextField" destination="R9u-Sd-seq" id="UCZ-fp-Kfy"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULTADO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-xu-TSy">
+                                        <rect key="frame" x="20" y="325" width="374" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71m-Me-vo4">
+                                        <rect key="frame" x="20" y="375.5" width="374" height="47"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="pIS-gr-vwL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRu-cN-UYT">
+                                        <rect key="frame" x="20" y="447.5" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Calcular"/>
+                                        <connections>
+                                            <action selector="clickCalcularButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pvm-L6-Pkf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cRu-cN-UYT" secondAttribute="trailing" constant="20" id="2k9-VR-lsV"/>
+                                    <constraint firstItem="5kT-xu-TSy" firstAttribute="top" secondItem="oIO-Ea-lHV" secondAttribute="bottom" constant="25" id="Aqa-ep-6Dk"/>
+                                    <constraint firstAttribute="trailing" secondItem="oIO-Ea-lHV" secondAttribute="trailing" id="Fsx-c0-2X6"/>
+                                    <constraint firstItem="cRu-cN-UYT" firstAttribute="top" secondItem="71m-Me-vo4" secondAttribute="bottom" constant="25" id="JLT-xt-hAA"/>
+                                    <constraint firstItem="71m-Me-vo4" firstAttribute="leading" secondItem="mec-HU-9WJ" secondAttribute="leading" constant="20" id="N1e-eo-mqx"/>
+                                    <constraint firstItem="5kT-xu-TSy" firstAttribute="leading" secondItem="mec-HU-9WJ" secondAttribute="leading" constant="20" id="Nbc-p3-lrx"/>
+                                    <constraint firstItem="oIO-Ea-lHV" firstAttribute="top" secondItem="mec-HU-9WJ" secondAttribute="top" constant="50" id="O70-rc-kfu"/>
+                                    <constraint firstItem="cRu-cN-UYT" firstAttribute="leading" secondItem="mec-HU-9WJ" secondAttribute="leading" constant="20" id="VHm-3d-0bt"/>
+                                    <constraint firstItem="oIO-Ea-lHV" firstAttribute="leading" secondItem="mec-HU-9WJ" secondAttribute="leading" id="ft9-qR-kuS"/>
+                                    <constraint firstItem="71m-Me-vo4" firstAttribute="leading" secondItem="mec-HU-9WJ" secondAttribute="leading" constant="20" id="gzq-V4-3d2"/>
+                                    <constraint firstAttribute="trailing" secondItem="71m-Me-vo4" secondAttribute="trailing" constant="20" id="huX-n3-YTp"/>
+                                    <constraint firstAttribute="trailing" secondItem="5kT-xu-TSy" secondAttribute="trailing" constant="20" id="juv-1h-tdW"/>
+                                    <constraint firstItem="71m-Me-vo4" firstAttribute="top" secondItem="5kT-xu-TSy" secondAttribute="bottom" constant="25" id="kud-9T-5Lv"/>
+                                    <constraint firstItem="71m-Me-vo4" firstAttribute="top" secondItem="5kT-xu-TSy" secondAttribute="bottom" constant="25" id="l0b-Sw-8Cz"/>
+                                    <constraint firstAttribute="trailing" secondItem="71m-Me-vo4" secondAttribute="trailing" constant="20" id="pzg-Ji-MX6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="alturaTextField" destination="hEm-Uf-9gN" id="sjw-n4-o7n"/>
+                                    <outlet property="pesoTextField" destination="R9u-Sd-seq" id="vDg-qI-NQ1"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mec-HU-9WJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DJq-aQ-IJA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mec-HU-9WJ" secondAttribute="trailing" id="QX3-Ps-NZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mec-HU-9WJ" secondAttribute="bottom" id="eWs-De-IGp"/>
+                            <constraint firstItem="mec-HU-9WJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nlF-QC-YbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="calcView" destination="oIO-Ea-lHV" id="LJw-IW-019"/>
+                        <outlet property="calcularButton" destination="cRu-cN-UYT" id="EmJ-qk-43g"/>
+                        <outlet property="containersView" destination="mec-HU-9WJ" id="UxA-0k-SOy"/>
+                        <outlet property="resultadoLabel" destination="71m-Me-vo4" id="tdW-Xe-Waf"/>
+                        <outlet property="resultsLabelInfo" destination="5kT-xu-TSy" id="yFr-7L-nT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="efy-Qt-4H7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
